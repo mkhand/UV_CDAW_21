@@ -6,7 +6,7 @@ RUN apt-get update && apt-get upgrade -y \
 
 # additional OS packages
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get -y install --no-install-recommends net-tools \
+    && apt-get -y install --no-install-recommends git net-tools \
     && apt-get clean -y && rm -rf /var/lib/apt/lists/*
 
 # PHP
